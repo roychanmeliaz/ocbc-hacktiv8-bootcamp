@@ -1,0 +1,16 @@
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/bin/Debug/net5.0/hello_world
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/bin/Debug/net5.0/hello_world.deps.json
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/bin/Debug/net5.0/hello_world.runtimeconfig.json
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/bin/Debug/net5.0/hello_world.runtimeconfig.dev.json
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/bin/Debug/net5.0/hello_world.dll
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/bin/Debug/net5.0/ref/hello_world.dll
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/bin/Debug/net5.0/hello_world.pdb
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/obj/Debug/net5.0/hello_world.csproj.AssemblyReference.cache
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/obj/Debug/net5.0/hello_world.GeneratedMSBuildEditorConfig.editorconfig
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/obj/Debug/net5.0/hello_world.AssemblyInfoInputs.cache
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/obj/Debug/net5.0/hello_world.AssemblyInfo.cs
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/obj/Debug/net5.0/hello_world.csproj.CoreCompileInputs.cache
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/obj/Debug/net5.0/hello_world.dll
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/obj/Debug/net5.0/ref/hello_world.dll
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/obj/Debug/net5.0/hello_world.pdb
+/home/ubuntu/ocbc_nisp/sesi_01/hello_world/obj/Debug/net5.0/hello_world.genruntimeconfig.cache

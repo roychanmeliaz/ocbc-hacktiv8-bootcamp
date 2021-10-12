@@ -1,0 +1,16 @@
+/home/ubuntu/ocbc_nisp/sesi_02/bin/Debug/net5.0/sesi_02
+/home/ubuntu/ocbc_nisp/sesi_02/bin/Debug/net5.0/sesi_02.deps.json
+/home/ubuntu/ocbc_nisp/sesi_02/bin/Debug/net5.0/sesi_02.runtimeconfig.json
+/home/ubuntu/ocbc_nisp/sesi_02/bin/Debug/net5.0/sesi_02.runtimeconfig.dev.json
+/home/ubuntu/ocbc_nisp/sesi_02/bin/Debug/net5.0/sesi_02.dll
+/home/ubuntu/ocbc_nisp/sesi_02/bin/Debug/net5.0/ref/sesi_02.dll
+/home/ubuntu/ocbc_nisp/sesi_02/bin/Debug/net5.0/sesi_02.pdb
+/home/ubuntu/ocbc_nisp/sesi_02/obj/Debug/net5.0/sesi_02.csproj.AssemblyReference.cache
+/home/ubuntu/ocbc_nisp/sesi_02/obj/Debug/net5.0/sesi_02.GeneratedMSBuildEditorConfig.editorconfig
+/home/ubuntu/ocbc_nisp/sesi_02/obj/Debug/net5.0/sesi_02.AssemblyInfoInputs.cache
+/home/ubuntu/ocbc_nisp/sesi_02/obj/Debug/net5.0/sesi_02.AssemblyInfo.cs
+/home/ubuntu/ocbc_nisp/sesi_02/obj/Debug/net5.0/sesi_02.csproj.CoreCompileInputs.cache
+/home/ubuntu/ocbc_nisp/sesi_02/obj/Debug/net5.0/sesi_02.dll
+/home/ubuntu/ocbc_nisp/sesi_02/obj/Debug/net5.0/ref/sesi_02.dll
+/home/ubuntu/ocbc_nisp/sesi_02/obj/Debug/net5.0/sesi_02.pdb
+/home/ubuntu/ocbc_nisp/sesi_02/obj/Debug/net5.0/sesi_02.genruntimeconfig.cache
