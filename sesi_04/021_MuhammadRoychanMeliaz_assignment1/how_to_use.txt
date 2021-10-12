@@ -1,0 +1,15 @@
+Cara Penggunaan:
+
+Terdapat 7 menu berupa:
+1. Segitiga Alphabet
+2. Segitiga Angka
+3. Bilangan Faktorial
+4. Membalikkan Angka
+5. Converter Angka dan String
+6. Cek Palindrome
+7. Biodata
+
+Inputkan nomor sesuai menu yang diinginkan, kemudian ikuti instruksinya.
+
+Regards,
+FSDO001ONL021, Muhammad Roychan Meliaz
