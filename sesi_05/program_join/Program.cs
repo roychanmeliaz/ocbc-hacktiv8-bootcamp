@@ -14,29 +14,46 @@ namespace program_join
             Pesawat pesawat = new Pesawat();
             Pesawat_Tempur tempur = new Pesawat_Tempur();
 
-            pesawat.nama = "pesawat";
-            pesawat.jumlahRoda = 3;
-            pesawat.Ketinggian = "1000 kaki";
-            pesawat.jumlahPenumpang = "3 penumpang";
-            tempur.nama = "AZ500TPU";
-            tempur.jumlahRoda=5;
-            tempur.Ketinggian = "200 kaki";
-            tempur.jumlahPenumpang = "2 penumpang + kopilot";
+            Console.Write("Masukkan nama pesawat: ");
+            pesawat.nama = Console.ReadLine();
+            Console.Write("Masukkan ketinggian pesawat: ");
+            pesawat.Ketinggian = Console.ReadLine();
+
+            Console.Write("Masukkan nama pesawat tempur: ");
+            tempur.nama = Console.ReadLine();
+            Console.Write("Masukkan jumlah roda pesawat tempur: ");
+            tempur.jumlahRoda=int.Parse(Console.ReadLine());
+            Console.Write("Masukkan ketinggian pesawat tempur: ");
+            tempur.Ketinggian = Console.ReadLine();
+            Console.Write("Masukkan jumlah penumpang pesawat tempur: ");
+            tempur.jumlahPenumpang = Console.ReadLine();
 
             pesawat.terbang();
             tempur.terbang();
         }
         public static void overloading() {
             data datanew = new data();
-            datanew.print("Foxy");
-            datanew.print(1641231231);
+            Console.Write("Masukkan string atau number: ");
+            string c = Console.ReadLine();
+            int value;
+            if (int.TryParse(c, out value)) {
+                datanew.print(value);
+            }
+            else {
+                datanew.print(c);
+            }
         }
         public static void bilangan() {
+            int bil1,bil2;
+            Console.Write("Masukkan bilangan 1: ");
+            bil1 = int.Parse(Console.ReadLine());
+            Console.Write("Masukkan bilangan 2: ");
+            bil2 = int.Parse(Console.ReadLine());
             Override over = new Override();
-            over.bilangan(5,10);
+            over.bilangan(bil1,bil2);
             over.penjumlahanperkaliandll();
             Program over2 = new Program();
-            over2.bilangan(5,10);
+            over2.bilangan(bil1,bil2);
             over2.penjumlahanperkaliandll();
         }
         public static void about() {
@@ -66,7 +83,7 @@ namespace program_join
                 Console.WriteLine("-----------------------------------------");
                 Console.WriteLine("1. Inheritance");
                 Console.WriteLine("2. Overloading");
-                Console.WriteLine("3. Bilangan");
+                Console.WriteLine("3. Overriding");
                 Console.WriteLine("4. About Me");
                 Console.WriteLine("5. Quit");
                 Console.WriteLine("-----------------------------------------");

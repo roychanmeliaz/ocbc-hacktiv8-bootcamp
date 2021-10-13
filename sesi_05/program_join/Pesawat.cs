@@ -3,8 +3,6 @@ using System;
 public class Pesawat
 {
     public string nama;
-    public int jumlahRoda;
-    public string jumlahPenumpang;
     private string ketinggian;
     public string Ketinggian
     {
@@ -25,6 +23,8 @@ public class Pesawat
 }
 public class Pesawat_Tempur:Pesawat
 {
+    public int jumlahRoda;
+    public string jumlahPenumpang;
     public void terbang()
     {
         Console.WriteLine($"Pesawat Tempur dengan nama {this.nama}, yang mempunyai jumlah roda {this.jumlahRoda}, sedang berada pada ketinggian {this.Ketinggian}, dengan membawa jumlah penumpang sebanyak {this.jumlahPenumpang}");
