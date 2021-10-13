@@ -1,0 +1,16 @@
+/home/ubuntu/ocbc_nisp/sesi_05/program3/obj/Debug/net5.0/program3.csproj.AssemblyReference.cache
+/home/ubuntu/ocbc_nisp/sesi_05/program3/obj/Debug/net5.0/program3.GeneratedMSBuildEditorConfig.editorconfig
+/home/ubuntu/ocbc_nisp/sesi_05/program3/obj/Debug/net5.0/program3.AssemblyInfoInputs.cache
+/home/ubuntu/ocbc_nisp/sesi_05/program3/obj/Debug/net5.0/program3.AssemblyInfo.cs
+/home/ubuntu/ocbc_nisp/sesi_05/program3/obj/Debug/net5.0/program3.csproj.CoreCompileInputs.cache
+/home/ubuntu/ocbc_nisp/sesi_05/program3/bin/Debug/net5.0/program3
+/home/ubuntu/ocbc_nisp/sesi_05/program3/bin/Debug/net5.0/program3.deps.json
+/home/ubuntu/ocbc_nisp/sesi_05/program3/bin/Debug/net5.0/program3.runtimeconfig.json
+/home/ubuntu/ocbc_nisp/sesi_05/program3/bin/Debug/net5.0/program3.runtimeconfig.dev.json
+/home/ubuntu/ocbc_nisp/sesi_05/program3/bin/Debug/net5.0/program3.dll
+/home/ubuntu/ocbc_nisp/sesi_05/program3/bin/Debug/net5.0/ref/program3.dll
+/home/ubuntu/ocbc_nisp/sesi_05/program3/bin/Debug/net5.0/program3.pdb
+/home/ubuntu/ocbc_nisp/sesi_05/program3/obj/Debug/net5.0/program3.dll
+/home/ubuntu/ocbc_nisp/sesi_05/program3/obj/Debug/net5.0/ref/program3.dll
+/home/ubuntu/ocbc_nisp/sesi_05/program3/obj/Debug/net5.0/program3.pdb
+/home/ubuntu/ocbc_nisp/sesi_05/program3/obj/Debug/net5.0/program3.genruntimeconfig.cache

@@ -1,0 +1,16 @@
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/obj/Debug/net5.0/program_join.csproj.AssemblyReference.cache
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/obj/Debug/net5.0/program_join.GeneratedMSBuildEditorConfig.editorconfig
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/obj/Debug/net5.0/program_join.AssemblyInfoInputs.cache
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/obj/Debug/net5.0/program_join.AssemblyInfo.cs
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/obj/Debug/net5.0/program_join.csproj.CoreCompileInputs.cache
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/bin/Debug/net5.0/program_join
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/bin/Debug/net5.0/program_join.deps.json
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/bin/Debug/net5.0/program_join.runtimeconfig.json
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/bin/Debug/net5.0/program_join.runtimeconfig.dev.json
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/bin/Debug/net5.0/program_join.dll
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/bin/Debug/net5.0/ref/program_join.dll
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/bin/Debug/net5.0/program_join.pdb
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/obj/Debug/net5.0/program_join.dll
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/obj/Debug/net5.0/ref/program_join.dll
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/obj/Debug/net5.0/program_join.pdb
+/home/ubuntu/ocbc_nisp/sesi_05/program_join/obj/Debug/net5.0/program_join.genruntimeconfig.cache
