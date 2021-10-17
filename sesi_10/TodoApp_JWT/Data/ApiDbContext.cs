@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using TodoApp.Models;
 
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
 
 namespace TodoApp.Data
 {

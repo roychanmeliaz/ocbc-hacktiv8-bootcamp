@@ -15,6 +15,13 @@ using Microsoft.OpenApi.Models;
 using TodoApp.Data;
 using Microsoft.EntityFrameworkCore;
 
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+// using TodoAppWithJWT.Configuration;
+using TodoApp.Configuration;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
 namespace TodoApp
 {
     public class Startup
@@ -36,18 +43,18 @@ namespace TodoApp
                     Configuration.GetConnectionString("DefaultConnection")
                 ));
 
-            services.AddAuthentication(option => {
+            services.AddAuthentication(options => {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-                ParallelOptions.DefaultChallengeScheme = JtwBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
-            .AddJwtBearer (TodoAppWithJWT => {
-                var key = Encoding.ASCII.GetByyes(Configuration["JwtConfig:Secret"]);
+            .AddJwtBearer (jwt => {
+                var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
 
                 jwt.SaveToken = true;
                 jwt.TokenValidationParameters = new TokenValidationParameters {
                     ValidateIssuerSigningKey = true,
-                    IssuesSigningKey = new SymmetricSecurityKey(key),
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
                     ValidateAudience = false,
                     ValidateLifetime = true,

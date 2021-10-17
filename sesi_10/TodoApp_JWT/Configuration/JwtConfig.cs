@@ -1,4 +1,5 @@
-namespace TodoAppWithJWT.Configuration
+// namespace TodoAppWithJWT.Configuration
+namespace TodoApp.Configuration
 {
     public class JwtConfig
     {
