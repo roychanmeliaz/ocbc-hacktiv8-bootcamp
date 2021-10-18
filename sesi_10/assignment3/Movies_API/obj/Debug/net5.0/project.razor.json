@@ -1,5 +1,5 @@
 {
-  "FilePath": "/home/ubuntu/ocbc_nisp/sesi_09/Kantor_WebAPI/Kantor_WebAPI.csproj",
+  "FilePath": "/home/ubuntu/ocbc_nisp/sesi_10/assignment3/Movies_API/Movies_API.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15616,7 +15616,7 @@
     ],
     "CSharpLanguageVersion": 900
   },
-  "RootNamespace": "Kantor_WebAPI",
+  "RootNamespace": "Movies_API",
   "Documents": [],
   "SerializationFormat": "0.2"
 }
