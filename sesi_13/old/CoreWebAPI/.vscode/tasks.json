@@ -80,8 +80,7 @@
             "dockerRun": {},
             "netCore": {
                 "appProject": "${workspaceFolder}/CoreWebAPI.csproj",
-                "enableDebugging": true,
-                "configureSsl": false
+                "enableDebugging": true
             }
         },
         {
