@@ -1,0 +1,59 @@
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\LoginSystem.exe.config
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\LoginSystem.exe
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\LoginSystem.pdb
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\obj\Debug\LoginSystem.csproj.AssemblyReference.cache
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\obj\Debug\LoginSystem.Properties.Resources.resources
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\obj\Debug\LoginSystem.csproj.GenerateResource.cache
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\obj\Debug\LoginSystem.csproj.CoreCompileInputs.cache
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\obj\Debug\LoginSystem.exe
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\obj\Debug\LoginSystem.pdb
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\BouncyCastle.Crypto.dll
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\Google.Protobuf.dll
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\K4os.Compression.LZ4.dll
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\K4os.Compression.LZ4.Streams.dll
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\K4os.Hash.xxHash.dll
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\MySql.Data.dll
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\Renci.SshNet.dll
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\System.Buffers.dll
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\System.Memory.dll
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\System.Numerics.Vectors.dll
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\Google.Protobuf.pdb
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\Google.Protobuf.xml
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\K4os.Compression.LZ4.xml
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\K4os.Compression.LZ4.Streams.xml
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\K4os.Hash.xxHash.xml
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\MySql.Data.xml
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\Renci.SshNet.xml
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\System.Buffers.xml
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\System.Memory.xml
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\System.Numerics.Vectors.xml
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\obj\Debug\LoginSystem.Form1.resources
+E:\OCBC Hacktiv8\C#\Sesi 07\LoginSystem\obj\Debug\LoginSystem.Register.resources
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\obj\Debug\LoginSystem.csproj.AssemblyReference.cache
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\obj\Debug\LoginSystem.Form1.resources
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\obj\Debug\LoginSystem.Properties.Resources.resources
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\obj\Debug\LoginSystem.Register.resources
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\obj\Debug\LoginSystem.csproj.GenerateResource.cache
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\obj\Debug\LoginSystem.csproj.CoreCompileInputs.cache
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\LoginSystem.exe.config
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\LoginSystem.exe
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\LoginSystem.pdb
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\MySql.Data.dll
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\System.Buffers.dll
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\System.Memory.dll
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\ZstdNet.dll
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\MySql.Data.xml
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\System.Memory.xml
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\obj\Debug\LoginSystem.exe
+C:\Users\Roy\Documents\other\OCBC-H8_mhdjr\Sesi 07\LoginSystem\obj\Debug\LoginSystem.pdb
