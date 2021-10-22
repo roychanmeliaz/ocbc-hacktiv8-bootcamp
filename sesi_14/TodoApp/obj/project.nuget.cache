@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xz2EdOgHZzIyhllIUCn0btPzuctx1xqjciEmkMcieqB2LIEwfKw7eqS8I1QA/H4ZQjp+zXgp7lItfy8UNculMQ==",
+  "dgSpecHash": "t9VPZc/hYhbPyfZG06N/iGCEKb6tZggwOwhPBqszfiqr9cVQhqNi38Qzr4qIvKe6c73CykEMGByLYpFqUUdUJQ==",
   "success": true,
-  "projectFilePath": "/home/ubuntu/ocbc_nisp/sesi_14/TodoApp/TodoApp.csproj",
+  "projectFilePath": "/home/ubuntu/ocbc_nisp/sesi_14/old/TodoApp/TodoApp.csproj",
   "expectedPackageFiles": [
     "/home/ubuntu/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/ubuntu/.nuget/packages/microsoft.build/16.8.0/microsoft.build.16.8.0.nupkg.sha512",

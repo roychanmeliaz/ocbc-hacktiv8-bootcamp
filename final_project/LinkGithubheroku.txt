@@ -1,0 +1,5 @@
+Heroku:
+https://payment-api-roy.herokuapp.com
+
+Github:
+https://github.com/roychanmeliaz/ocbc-hacktiv8-bootcamp/tree/main/final_project

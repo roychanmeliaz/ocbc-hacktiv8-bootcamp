@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ubuntu/ocbc_nisp/sesi_14/TodoApp/TodoApp.csproj": {}
+    "/home/ubuntu/ocbc_nisp/sesi_14/old/TodoApp/TodoApp.csproj": {}
   },
   "projects": {
-    "/home/ubuntu/ocbc_nisp/sesi_14/TodoApp/TodoApp.csproj": {
+    "/home/ubuntu/ocbc_nisp/sesi_14/old/TodoApp/TodoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ubuntu/ocbc_nisp/sesi_14/TodoApp/TodoApp.csproj",
+        "projectUniqueName": "/home/ubuntu/ocbc_nisp/sesi_14/old/TodoApp/TodoApp.csproj",
         "projectName": "TodoApp",
-        "projectPath": "/home/ubuntu/ocbc_nisp/sesi_14/TodoApp/TodoApp.csproj",
+        "projectPath": "/home/ubuntu/ocbc_nisp/sesi_14/old/TodoApp/TodoApp.csproj",
         "packagesPath": "/home/ubuntu/.nuget/packages/",
-        "outputPath": "/home/ubuntu/ocbc_nisp/sesi_14/TodoApp/obj/",
+        "outputPath": "/home/ubuntu/ocbc_nisp/sesi_14/old/TodoApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ubuntu/.nuget/NuGet/NuGet.Config"
