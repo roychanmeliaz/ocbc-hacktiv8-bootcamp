@@ -1,3 +1,54 @@
+Heroku link:
+	https://payment-api-roy.herokuapp.com/
+
+Prosedur running:
+
+1. Jalankan xampp dan mysql
+
+	$ /opt/lamp/xampp start
+
+2. Lakukan migrasi database
+
+	$ dotnet ef database update
+
+3. Jalankan dotnet
+
+	$ dotnet run
+
+Penggunaan API UserAuth:
+
+Masuk ke lokasi swagger di:
+
+	https://localhost:5001/swagger/index.html
+
+Lakukan hal berikut:
+1. Register
+	POST http://localhost:5000/api/AuthManagement/Register
+	Body:
+	{
+	  "username": "new_user",
+	  "email": "new_user@example.com",
+	  "password": "Password_123"
+	}
+
+2. Login
+	POST http://localhost:5000/api/AuthManagement/Login
+	Body:
+	{
+	  "email": "new_user@example.com",
+	  "password": "Password_123"
+	}
+
+3. Cek status token
+	POST http://localhost:5000/api/AuthManagement/RefreshToken
+	Body:
+	{
+	    "token": "eyJhbGciOiJIUzI1NiIsf...",
+	    "refreshToken": "OFGYBYUL1JH7.."
+	}
+
+4. Tambahkan token ke authorization dengan format Bearer {token} agar mendapatkan akses untuk operasi PaymentAPI
+
 Penggunaan API PaymentAPI lokal:
 
 Terdapat 5 buah endpoint:
@@ -15,5 +66,13 @@ Untuk API PUT dan POST (4 dan 5), diperlukan params seperti berikut:
     "cardNumber": "string",
     "expirationDate": "string",
     "securityCode": "string"
+}
+Contoh:
+{
+    "paymentDetailId": 1,
+    "cardOwnerName": "Roy",
+    "cardNumber": "123 456 789",
+    "expirationDate": "10/1/2026",
+    "securityCode": "331"
 }
 

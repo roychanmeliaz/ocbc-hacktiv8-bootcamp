@@ -1,0 +1,19 @@
+Penggunaan API PaymentAPI lokal:
+
+Terdapat 5 buah endpoint:
+1. GET http://localhost:5000/api/PaymentDetail
+2. GET http://localhost:5000/api/PaymentDetail/$id
+3. DEL http://localhost:5000/api/PaymentDetail/$id
+4. PUT http://localhost:5000/api/PaymentDetail/$id
+5. POST http://localhost:5000/api/PaymentDetail
+
+Untuk API GET dan DEL (1, 2, dan 3), tidak perlu input params
+Untuk API PUT dan POST (4 dan 5), diperlukan params seperti berikut:
+{
+    "paymentDetailId": 1,
+    "cardOwnerName": "string",
+    "cardNumber": "string",
+    "expirationDate": "string",
+    "securityCode": "string"
+}
+

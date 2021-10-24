@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "4831cf46-233c-4533-9add-703bdf1e2be2",
-		"name": "final_project_021_roy",
+		"name": "final_project",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -9,10 +9,106 @@
 			"name": "local_api",
 			"item": [
 				{
-					"name": "http://localhost:5000/api/PaymentDetail",
+					"name": "/api/AuthManagement/Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"new_user\",\n  \"email\": \"new_user@example.com\",\n  \"password\": \"Password_123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/AuthManagement/Register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"AuthManagement",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/AuthManagement/Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"new_user@example.com\",\n  \"password\": \"Password_123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/AuthManagement/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"AuthManagement",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/AuthManagement/RefreshToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjMwM2IzOGEyLTE0ZTItNGE4My05MzViLWI5Mjg1MTJhNWJmMSIsImVtYWlsIjoibmV3X3VzZXJAZXhhbXBsZS5jb20iLCJzdWIiOiJuZXdfdXNlckBleGFtcGxlLmNvbSIsImp0aSI6ImQyMmRkYmYxLTU0MGMtNGQ2MC04YTE1LWFkMzgyNWMzYmQ2MCIsIm5iZiI6MTYzNTA4ODkxNCwiZXhwIjoxNjM1MDkwMTE0LCJpYXQiOjE2MzUwODg5MTR9.aYUow1SoL02O5Ol8P5NSxko8oDDTOJwIQSRUCbuR_Co\",\n    \"refreshToken\": \"OFGYBYUL1JH732NNS8S9F6JNE8NFLFAPL2N08b609f4-2c70-4c75-b1e9-0683fb15b370\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/AuthManagement/RefreshToken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"AuthManagement",
+								"RefreshToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/PaymentDetail",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjMwM2IzOGEyLTE0ZTItNGE4My05MzViLWI5Mjg1MTJhNWJmMSIsImVtYWlsIjoibmV3X3VzZXJAZXhhbXBsZS5jb20iLCJzdWIiOiJuZXdfdXNlckBleGFtcGxlLmNvbSIsImp0aSI6ImIzMjE4YTU0LWM2ODgtNDQ5Ni04OTQ2LTZhODI2NmMxYzY4MSIsIm5iZiI6MTYzNTA5MDk5MiwiZXhwIjoxNjM1MDkyMTkyLCJpYXQiOjE2MzUwOTA5OTJ9.cCg67SKtPYnpJgrp8OvrsZezjIAZuJ6BHyReqia9Pkg",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:5000/api/PaymentDetail",
 							"protocol": "http",
@@ -29,16 +125,129 @@
 					"response": []
 				},
 				{
-					"name": "http://localhost:5000/api/PaymentDetail/1",
+					"name": "/api/PaymentDetail/1",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjMwM2IzOGEyLTE0ZTItNGE4My05MzViLWI5Mjg1MTJhNWJmMSIsImVtYWlsIjoibmV3X3VzZXJAZXhhbXBsZS5jb20iLCJzdWIiOiJuZXdfdXNlckBleGFtcGxlLmNvbSIsImp0aSI6ImIzMjE4YTU0LWM2ODgtNDQ5Ni04OTQ2LTZhODI2NmMxYzY4MSIsIm5iZiI6MTYzNTA5MDk5MiwiZXhwIjoxNjM1MDkyMTkyLCJpYXQiOjE2MzUwOTA5OTJ9.cCg67SKtPYnpJgrp8OvrsZezjIAZuJ6BHyReqia9Pkg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/PaymentDetail/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"PaymentDetail",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/PaymentDetail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjMwM2IzOGEyLTE0ZTItNGE4My05MzViLWI5Mjg1MTJhNWJmMSIsImVtYWlsIjoibmV3X3VzZXJAZXhhbXBsZS5jb20iLCJzdWIiOiJuZXdfdXNlckBleGFtcGxlLmNvbSIsImp0aSI6ImIzMjE4YTU0LWM2ODgtNDQ5Ni04OTQ2LTZhODI2NmMxYzY4MSIsIm5iZiI6MTYzNTA5MDk5MiwiZXhwIjoxNjM1MDkyMTkyLCJpYXQiOjE2MzUwOTA5OTJ9.cCg67SKtPYnpJgrp8OvrsZezjIAZuJ6BHyReqia9Pkg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paymentDetailId\": 3,\n    \"cardOwnerName\": \"Roy\",\n    \"cardNumber\": \"123456\",\n    \"expirationDate\": \"30/05/2026\",\n    \"securityCode\": \"443\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/PaymentDetail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"PaymentDetail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/PaymentDetail",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjMwM2IzOGEyLTE0ZTItNGE4My05MzViLWI5Mjg1MTJhNWJmMSIsImVtYWlsIjoibmV3X3VzZXJAZXhhbXBsZS5jb20iLCJzdWIiOiJuZXdfdXNlckBleGFtcGxlLmNvbSIsImp0aSI6ImIzMjE4YTU0LWM2ODgtNDQ5Ni04OTQ2LTZhODI2NmMxYzY4MSIsIm5iZiI6MTYzNTA5MDk5MiwiZXhwIjoxNjM1MDkyMTkyLCJpYXQiOjE2MzUwOTA5OTJ9.cCg67SKtPYnpJgrp8OvrsZezjIAZuJ6BHyReqia9Pkg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paymentDetailId\": 2,\n    \"cardOwnerName\": \"Feny\",\n    \"cardNumber\": \"333111\",\n    \"expirationDate\": \"22/10/2026\",\n    \"securityCode\": \"477\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/PaymentDetail/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"PaymentDetail",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/PaymentDetail",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjMwM2IzOGEyLTE0ZTItNGE4My05MzViLWI5Mjg1MTJhNWJmMSIsImVtYWlsIjoibmV3X3VzZXJAZXhhbXBsZS5jb20iLCJzdWIiOiJuZXdfdXNlckBleGFtcGxlLmNvbSIsImp0aSI6ImIzMjE4YTU0LWM2ODgtNDQ5Ni04OTQ2LTZhODI2NmMxYzY4MSIsIm5iZiI6MTYzNTA5MDk5MiwiZXhwIjoxNjM1MDkyMTkyLCJpYXQiOjE2MzUwOTA5OTJ9.cCg67SKtPYnpJgrp8OvrsZezjIAZuJ6BHyReqia9Pkg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paymentDetailId\": 4,\n    \"cardOwnerName\": \"ownername\",\n    \"cardNumber\": \"string\",\n    \"expirationDate\": \"string\",\n    \"securityCode\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
 							"raw": "http://localhost:5000/api/PaymentDetail/1",
@@ -55,95 +264,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "http://localhost:5000/api/PaymentDetail",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"paymentDetailId\": 0,\n    \"cardOwnerName\": \"string\",\n    \"cardNumber\": \"string\",\n    \"expirationDate\": \"string\",\n    \"securityCode\": \"string\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:5000/api/PaymentDetail",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"PaymentDetail"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:5000/api/PaymentDetail Copy",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"paymentDetailId\": 4,\n    \"cardOwnerName\": \"ownername\",\n    \"cardNumber\": \"string\",\n    \"expirationDate\": \"string\",\n    \"securityCode\": \"string\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:5000/api/PaymentDetail/4",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"PaymentDetail",
-								"4"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:5000/api/PaymentDetail Copy 2",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"paymentDetailId\": 4,\n    \"cardOwnerName\": \"ownername\",\n    \"cardNumber\": \"string\",\n    \"expirationDate\": \"string\",\n    \"securityCode\": \"string\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:5000/api/PaymentDetail/4",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"api",
-								"PaymentDetail",
-								"4"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
@@ -151,10 +271,106 @@
 			"name": "heroku_api",
 			"item": [
 				{
+					"name": "/api/AuthManagement/Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"new_user\",\n  \"email\": \"new_user@example.com\",\n  \"password\": \"Password_123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/AuthManagement/Register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"AuthManagement",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/AuthManagement/Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"new_user@example.com\",\n  \"password\": \"Password_123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/AuthManagement/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"AuthManagement",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/AuthManagement/RefreshToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"new_user@example.com\",\n  \"password\": \"Password_123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/AuthManagement/RefreshToken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"AuthManagement",
+								"RefreshToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "api/PaymentDetail",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjMwM2IzOGEyLTE0ZTItNGE4My05MzViLWI5Mjg1MTJhNWJmMSIsImVtYWlsIjoibmV3X3VzZXJAZXhhbXBsZS5jb20iLCJzdWIiOiJuZXdfdXNlckBleGFtcGxlLmNvbSIsImp0aSI6ImIzMjE4YTU0LWM2ODgtNDQ5Ni04OTQ2LTZhODI2NmMxYzY4MSIsIm5iZiI6MTYzNTA5MDk5MiwiZXhwIjoxNjM1MDkyMTkyLCJpYXQiOjE2MzUwOTA5OTJ9.cCg67SKtPYnpJgrp8OvrsZezjIAZuJ6BHyReqia9Pkg",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "https://payment-api-roy.herokuapp.com/api/PaymentDetail",
 							"protocol": "https",
@@ -178,7 +394,13 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjMwM2IzOGEyLTE0ZTItNGE4My05MzViLWI5Mjg1MTJhNWJmMSIsImVtYWlsIjoibmV3X3VzZXJAZXhhbXBsZS5jb20iLCJzdWIiOiJuZXdfdXNlckBleGFtcGxlLmNvbSIsImp0aSI6ImIzMjE4YTU0LWM2ODgtNDQ5Ni04OTQ2LTZhODI2NmMxYzY4MSIsIm5iZiI6MTYzNTA5MDk5MiwiZXhwIjoxNjM1MDkyMTkyLCJpYXQiOjE2MzUwOTA5OTJ9.cCg67SKtPYnpJgrp8OvrsZezjIAZuJ6BHyReqia9Pkg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": ""
@@ -204,7 +426,13 @@
 					"name": "api/PaymentDetail",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjMwM2IzOGEyLTE0ZTItNGE4My05MzViLWI5Mjg1MTJhNWJmMSIsImVtYWlsIjoibmV3X3VzZXJAZXhhbXBsZS5jb20iLCJzdWIiOiJuZXdfdXNlckBleGFtcGxlLmNvbSIsImp0aSI6ImIzMjE4YTU0LWM2ODgtNDQ5Ni04OTQ2LTZhODI2NmMxYzY4MSIsIm5iZiI6MTYzNTA5MDk5MiwiZXhwIjoxNjM1MDkyMTkyLCJpYXQiOjE2MzUwOTA5OTJ9.cCg67SKtPYnpJgrp8OvrsZezjIAZuJ6BHyReqia9Pkg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"cardOwnerName\": \"auto_inc\",\n    \"cardNumber\": \"string\",\n    \"expirationDate\": \"string\",\n    \"securityCode\": \"string\"\n}",
@@ -234,7 +462,13 @@
 					"name": "api/PaymentDetail",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjMwM2IzOGEyLTE0ZTItNGE4My05MzViLWI5Mjg1MTJhNWJmMSIsImVtYWlsIjoibmV3X3VzZXJAZXhhbXBsZS5jb20iLCJzdWIiOiJuZXdfdXNlckBleGFtcGxlLmNvbSIsImp0aSI6ImIzMjE4YTU0LWM2ODgtNDQ5Ni04OTQ2LTZhODI2NmMxYzY4MSIsIm5iZiI6MTYzNTA5MDk5MiwiZXhwIjoxNjM1MDkyMTkyLCJpYXQiOjE2MzUwOTA5OTJ9.cCg67SKtPYnpJgrp8OvrsZezjIAZuJ6BHyReqia9Pkg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"paymentDetailId\": 7,\n    \"cardOwnerName\": \"newname\",\n    \"cardNumber\": \"string\",\n    \"expirationDate\": \"string\",\n    \"securityCode\": \"string\"\n}",
@@ -265,7 +499,13 @@
 					"name": "api/PaymentDetail",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjMwM2IzOGEyLTE0ZTItNGE4My05MzViLWI5Mjg1MTJhNWJmMSIsImVtYWlsIjoibmV3X3VzZXJAZXhhbXBsZS5jb20iLCJzdWIiOiJuZXdfdXNlckBleGFtcGxlLmNvbSIsImp0aSI6ImIzMjE4YTU0LWM2ODgtNDQ5Ni04OTQ2LTZhODI2NmMxYzY4MSIsIm5iZiI6MTYzNTA5MDk5MiwiZXhwIjoxNjM1MDkyMTkyLCJpYXQiOjE2MzUwOTA5OTJ9.cCg67SKtPYnpJgrp8OvrsZezjIAZuJ6BHyReqia9Pkg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"paymentDetailId\": 4,\n    \"cardOwnerName\": \"ownername\",\n    \"cardNumber\": \"string\",\n    \"expirationDate\": \"string\",\n    \"securityCode\": \"string\"\n}",

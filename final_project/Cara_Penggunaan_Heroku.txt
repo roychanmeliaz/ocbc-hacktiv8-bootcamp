@@ -1,3 +1,36 @@
+Heroku link:
+	https://payment-api-roy.herokuapp.com/
+
+Penggunaan API UserAuth:
+
+Lakukan hal berikut:
+1. Register
+	POST https://payment-api-roy.herokuapp.com/api/AuthManagement/Register
+	Body:
+	{
+	  "username": "new_user",
+	  "email": "new_user@example.com",
+	  "password": "Password_123"
+	}
+
+2. Login
+	POST https://payment-api-roy.herokuapp.com/api/AuthManagement/Login
+	Body:
+	{
+	  "email": "new_user@example.com",
+	  "password": "Password_123"
+	}
+
+3. Cek status token
+	POST https://payment-api-roy.herokuapp.com/api/AuthManagement/RefreshToken
+	Body:
+	{
+	    "token": "eyJhbGciOiJIUzI1NiIsf...",
+	    "refreshToken": "OFGYBYUL1JH7.."
+	}
+
+4. Tambahkan token ke authorization dengan format Bearer {token} agar mendapatkan akses untuk operasi PaymentAPI
+
 Penggunaan API PaymentAPI Heroku:
 
 Terdapat 5 buah endpoint:
@@ -16,4 +49,11 @@ Untuk API PUT dan POST (4 dan 5), diperlukan params seperti berikut:
     "expirationDate": "string",
     "securityCode": "string"
 }
-
+Contoh:
+{
+    "paymentDetailId": 1,
+    "cardOwnerName": "Roy",
+    "cardNumber": "123 456 789",
+    "expirationDate": "10/1/2026",
+    "securityCode": "331"
+}
