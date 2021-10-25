@@ -1,0 +1,7 @@
+Usage:
+	node program.js {a} {b}
+Ex:
+	node 021_MuhammadRoychanMeliaz.js 10 2
+        
+Github link:
+	https://github.com/roychanmeliaz/ocbc-hacktiv8-bootcamp/tree/main/sesi_17/assignment4
