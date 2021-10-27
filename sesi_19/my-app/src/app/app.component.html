@@ -10,8 +10,9 @@
 
 <p>------------------------------</p>
 <p>Counter: {{num}}</p>
-<app-counter-button (clickEventHandler)="increment()" [name]="'+'"></app-counter-button>
-<app-counter-button (clickEventHandler)="decrement()" [name]="'-'"></app-counter-button>
+<app-counter-button (clickEventHandler)="increment()" [name]="'+'" [isDisabled]="false"></app-counter-button>
+<app-counter-button (clickEventHandler)="decrement()" [name]="'-'" [isDisabled]="minDisable"></app-counter-button>
+<app-counter-button [name]="'Button ke-disable'" [isDisabled]="true"></app-counter-button>
 <p>------------------------------</p>
 
 
@@ -28,4 +29,10 @@
 <br>
 
 <app-counter-button *ngIf="buttonState" (clickEventHandler)="setFalse()" [name]="'Klik saya'"></app-counter-button>
-<app-counter-button [name]="'Button ke-disable'" [isDisabled]="true"></app-counter-button>
+
+<br>
+<br>
+<label>
+    Say something
+    <input #message> {{message|json}}
+</label>

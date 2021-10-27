@@ -1,0 +1,3 @@
+()   -> DOM ke komponent
+[]   -> component ke DOM
+[()] -> Two way data binding

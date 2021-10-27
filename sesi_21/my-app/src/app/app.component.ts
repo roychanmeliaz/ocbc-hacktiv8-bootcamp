@@ -14,6 +14,50 @@ export class AppComponent {
   minDisable = true;
 
   buttonState = true;
+  showParagraph = true;
+
+  messages = [
+    "I can see you",
+    "You cannot see me anymore",
+    "Now you see me",
+    "Now you don't"
+  ]
+
+  people= [
+    {
+      name: "Ricky",
+      age: 17,
+      country: "MARS"
+    },
+    {
+      name: "Etasa",
+      age: 19,
+      country: "USA"
+    },
+    {
+      name: "Bayu",
+      age: 19,
+      country: "HK"
+    },
+    {
+      name: "Etasa",
+      age: 19,
+      country: "USA"
+    },
+    {
+      name: "Ryan",
+      age: 18,
+      country: "UK"
+    },
+    {
+      name: "Rara",
+      age: 18,
+      country: "USA"
+    }
+  ]
+
+  // pipe
+  currentDate = new Date;
 
   constructor() {}
 

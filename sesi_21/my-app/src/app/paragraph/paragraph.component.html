@@ -1,0 +1,21 @@
+<!-- perbedaan penggunaan ngIf 1-->
+<!-- <ng-template [ngIf]="isShown">
+    <p>{{message}}</p>
+</ng-template> -->
+
+<!-- perbedaan penggunaan ngIf 2-->
+<p *ngIf="isShown">{{message}}</p>
+<!-- <p *ngIf="message.length>2">{{message}}</p> -->
+
+
+<!-- <ng-template [ngIf]="isShown">
+    <p>{{message}}</p>
+    <p>{{message}}</p>
+    <p>{{message}}</p>
+</ng-template>
+
+<div *ngIf="isShown">
+    <p>{{message}}</p>
+    <p>{{message}}</p>
+    <p>{{message}}</p>
+</div> -->

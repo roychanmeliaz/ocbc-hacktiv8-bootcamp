@@ -1,0 +1,110 @@
+<h1>Test Angular</h1>
+<comp-aside></comp-aside>
+<app-header></app-header>
+
+<p>------------------------------</p>
+<app-button (clickEventHandler)="addCounter($event)" [name]="title"></app-button>
+<p>{{counter}} kali diklik!</p>
+<p>Text: {{text}}</p>
+
+
+<p>------------------------------</p>
+<p>Counter: {{num}}</p>
+<app-counter-button (clickEventHandler)="increment()" [name]="'+'" [isDisabled]="false"></app-counter-button>
+<app-counter-button (clickEventHandler)="decrement()" [name]="'-'" [isDisabled]="minDisable"></app-counter-button>
+<app-counter-button [name]="'Button ke-disable'" [isDisabled]="true"></app-counter-button>
+<p>------------------------------</p>
+
+
+<h3>Items: </h3>
+
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul>
+
+<app-add-new-item (newItemEvent)="addItemInParent($event)" (hapusItemEvent)="hapusItem()"></app-add-new-item>
+
+<br>
+<br>
+<br>
+
+<app-counter-button *ngIf="buttonState" (clickEventHandler)="setFalse()" [name]="'Klik saya'"></app-counter-button>
+
+<br>
+<br>
+<label>
+    Say something
+    <input #message> {{message|json}}
+</label>
+
+<p *ngIf='showParagraph'>This is a paragraph</p>
+
+<div *ngFor="let message of messages">
+    <app-paragraph [message]="message" [isShown]="true"></app-paragraph>
+</div>
+<!-- <app-paragraph [message]="'You cannot see me'" [isShown]="true"></app-paragraph> -->
+
+<table border="1">
+    <tr *ngFor="let message of messages; let i = index">
+        <ng-template [ngIf]="i>1"]>
+            <td>{{i+1}}</td>
+            <td>{{message}}</td>
+        </ng-template>
+    </tr>
+</table>
+
+<table border="1">
+    <ng-template ngFor let-message [ngForOf]="messages" let-i="index">
+        <tr *ngIf="i>1">
+            <td>
+                {{i+1}}
+            </td>
+            <td>
+                {{ message }}
+            </td>
+        </tr>
+    </ng-template>
+</table>
+
+
+<ul>
+    <li *ngFor="let person of people" [ngStyle]="{'color': (person.country === 'USA') ? 'red' : (person.country === 'HK') ? 'blue' : (person.country === 'MARS') ? 'green' : ''}">
+        {{person.name}}, {{person.age}}th dari {{person.country}}
+    </li>
+</ul>
+
+
+<ul>
+    <li *ngFor="let person of people" [class.text-red]="person.country==='USA'" [class.text-blue]="person.country==='HK'" [class.text-green]="person.country==='MARS'">
+        {{person.name}}, {{person.age}}th dari {{person.country}}
+    </li>
+</ul>
+
+<!-- piping       ==>     ==>    ==>   -->
+<!-- pass variable | pipe | pipe | pipe -->
+<h4>
+    {{ currentDate }}
+</h4>
+<h4>
+    {{ currentDate | date }}
+</h4>
+<h4>
+    {{ currentDate | date: 'dd/MMMM/YYYY' | uppercase }}
+</h4>
+<h4>
+    {{ currentDate | date: 'fullDate' | uppercase }}
+</h4>
+<h4>
+    {{ people | json }}
+</h4>
+<h4>
+    {{ 4567893248 | fileSize }} <br>
+    {{ 4567893248 | fileSize: 'GB' }}
+</h4>
+<br>
+<br>
+<br>
+<br>
+
+<!-- ng switch ntar lanjutin -->
+
