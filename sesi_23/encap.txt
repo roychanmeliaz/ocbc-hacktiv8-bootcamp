@@ -1,0 +1,3 @@
+Encapsulation demo:
+
+https://stackblitz.com/angular/lyeqqlrdybb?file=srchttps://stackblitz.com/angular/lyeqqlrdybb?file=src%2Fapp%2Fapp.component.tsFapphttps://stackblitz.com/angular/lyeqqlrdybb?file=src%2Fapp%2Fapp.component.tsFapp.component.ts

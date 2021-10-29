@@ -1,0 +1,31 @@
+<form [formGroup]="todoForm" (ngSubmit)="addTodoReactive()">
+    <div class="input-group mb-3">
+        <!-- <input
+            type="text"
+            name="inputTodo"
+            placeholder="Enter todo..."
+            class="form-control"
+            [(ngModel)]="inputTodo"
+            formControlName = "todo"
+        /> -->
+        <!-- <input
+            type="submit"
+            value="Add Todo"
+            class="btn btn-primary"
+            (click)="addTodo()"
+            [disabled]="false"
+        /> -->
+        <input
+            type="text"
+            name="inputTodo"
+            placeholder="Enter todo..."
+            class="form-control"
+            formControlName = "todo"
+        />
+        <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="todo?.invalid"
+        >Add</button>
+    </div>
+</form>

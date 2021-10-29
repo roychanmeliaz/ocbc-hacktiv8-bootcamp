@@ -1,0 +1,11 @@
+.no-encapsulation {
+    color:green;
+}
+
+div.no-encapsulation {
+    border: green solid 1px;
+}
+
+h2 {
+    color: green;
+}
