@@ -1,0 +1,13 @@
+<div class="container p-5 ">
+    <div class="row g-5">
+        <div class="col-md-4" *ngFor="let country of countries; let i = index">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{country.country}}</h5>
+                    <p class="card-text"><b>Capital:</b> {{country.capital}}</p>
+                    <a (click)="emitEvent(country.country)" href="#" class=" stretched-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

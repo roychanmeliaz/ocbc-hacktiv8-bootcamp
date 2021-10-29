@@ -1,6 +1,4 @@
-<app-navbar></app-navbar>
-
-<div class="container d-flex justify-content-center p-5" >
-  <button type="button" class="btn btn-dark">Homepage</button>
-  <button type="button" class="btn btn-dark">List all countries</button>
-</div>
+<app-navbar (allCountriesEmit)="ui_mode=1" (homepageEmit)="ui_mode=0"></app-navbar>
+<app-home *ngIf="ui_mode==0" (clickEvent)="gotoCountryDetail($event)" [countriesByGdp]="countriesByGdp" [countriesByArea]="countriesByArea" [countriesByPopulation]="countriesByPopulation"></app-home>
+<app-all-countries *ngIf="ui_mode==1" (clickEvent)="gotoCountryDetail($event)" [countries]="countries"></app-all-countries>
+<app-country-detail *ngIf="ui_mode==2" [data]="countryToSend"></app-country-detail>

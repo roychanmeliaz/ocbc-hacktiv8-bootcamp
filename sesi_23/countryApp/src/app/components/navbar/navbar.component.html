@@ -1,5 +1,17 @@
-<nav class="navbar navbar-dark bg-danger">
+<nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Countries App</a>
     </div>
 </nav>
+
+<div class="container d-flex justify-content-center p-5" >
+    <h1>Fun Facts about Countries</h1>
+</div>
+<div class="container d-flex justify-content-center" >
+    <div class="col-md-4 text-center">
+        <button (click)="emitHomepageEmit()" type="button" class="btn btn-dark w-75">Homepage</button>
+    </div>
+    <div class="col-md-4 text-center">
+        <button (click)="emitAllCountriesEmit()" type="button" class="btn btn-dark w-75">List all countries</button>
+    </div>
+</div>

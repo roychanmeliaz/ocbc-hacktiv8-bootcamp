@@ -1,0 +1,57 @@
+<!-- GDP -->
+<div class="container d-flex justify-content-center p-5" >
+    <h2>Top 3 Biggest GDP</h2>
+</div>
+<div class="container">
+    <div class="row g-5">
+        <div class="col-md-4" *ngFor="let country of countriesByGdp; let i = index">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{country.country}}</h5>
+                    <p class="card-text"><b>GDP:</b> {{country.gdp  | number: '2.'}} USD</p>
+                    <a (click)="emitEvent(country.country)" href="#" class=" stretched-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Population -->
+<div class="container d-flex justify-content-center p-5" >
+    <h2>Top 3 Biggest Area</h2>
+</div>
+<div class="container">
+    <div class="row g-5">
+        <div class="col-md-4" *ngFor="let country of countriesByArea; let i = index">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{country.country}}</h5>
+                    <p class="card-text"><b>Area:</b> {{country.area  | number: '2.'}} km²</p>
+                    <a (click)="emitEvent(country.country)" href="#" class=" stretched-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Area -->
+<div class="container d-flex justify-content-center p-5" >
+    <h2>Top 3 Biggest Population</h2>
+</div>
+<div class="container">
+    <div class="row g-5">
+        <div class="col-md-4" *ngFor="let country of countriesByPopulation; let i = index">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{country.country}}</h5>
+                    <p class="card-text"><b>Population:</b> {{country.population  | number: '2.'}}</p>
+                    <a (click)="emitEvent(country.country)" href="#" class=" stretched-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
