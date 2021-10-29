@@ -9,6 +9,7 @@ import {Todo} from '../../models/Todo';
 export class TodoListComponent implements OnInit {
 
   todos:Todo[]=[];
+  msg_val: string="";
 
   constructor() { }
 
@@ -33,8 +34,14 @@ export class TodoListComponent implements OnInit {
     })
   }
 
+  // editTodo(id:number) {
+  //   this.todos[id].editing=!this.todos[id].editing;
+  // }
+
   editTodo(id:number) {
-    this.todos[id].editing=!this.todos[id].editing;
+    this.msg_val=this.todos[id].content;
+    console.log(this.msg_val)
+    this.deleteTodo(id);
   }
 
   doneEditTodo(id:number) {
@@ -47,6 +54,7 @@ export class TodoListComponent implements OnInit {
 
   addTodo(todo:Todo) {
     this.todos.push(todo);
+    this.msg_val='';
   }
 
 }

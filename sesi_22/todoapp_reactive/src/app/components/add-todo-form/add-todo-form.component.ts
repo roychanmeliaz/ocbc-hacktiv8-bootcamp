@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import {Todo} from '../../models/Todo'
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -8,8 +8,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './add-todo-form.component.html',
   styleUrls: ['./add-todo-form.component.css']
 })
-export class AddTodoFormComponent implements OnInit {
+export class AddTodoFormComponent implements OnInit, OnChanges {
 
+  @Input() data = '';
   @Output() newTodoEvent = new EventEmitter<Todo>();
   inputTodo:string="";
 
@@ -30,6 +31,18 @@ export class AddTodoFormComponent implements OnInit {
   })
 
   ngOnInit(): void {
+    this.todoForm.setValue({
+      todo: this.data, 
+    });
+  }
+  
+
+  ngOnChanges(changes: SimpleChanges) {
+    // changes.prop contains the old and the new value...
+    this.todoForm.setValue({
+      todo: changes.data.currentValue, 
+    });
+    console.log(changes.data)
   }
 
   // addTodo() {

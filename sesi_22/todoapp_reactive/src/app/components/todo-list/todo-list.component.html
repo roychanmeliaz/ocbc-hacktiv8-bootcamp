@@ -1,4 +1,4 @@
-<app-add-todo-form (newTodoEvent)="addTodo($event)">
+<app-add-todo-form [data]="msg_val" (newTodoEvent)="addTodo($event)">
 </app-add-todo-form>
 
 <ol *ngFor="let todo of todos let i=index;" class="list-group">
