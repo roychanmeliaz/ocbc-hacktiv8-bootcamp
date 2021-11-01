@@ -1,0 +1,129 @@
+<!-- <div class="container">
+    <button mat-raised-button (click)="mockUsers()" color="primary">Get mock users</button>
+</div>
+<div class="container">
+    <p>Received: {{usersList}}</p>
+</div> -->
+
+<div class="container center">
+    <h1 *ngIf="inputMode==1">Add User</h1>
+    <h1 *ngIf="inputMode==2">Edit User id {{currentlyEditedId}}</h1>
+</div>
+<div class="container center">
+    <ng-container *ngIf="inputMode!=0">
+        <form [formGroup]="form.inputData" (ngSubmit)="onSubmit()" class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Title</mat-label>
+                <input formControlName="title" matInput placeholder="Full Stack Developer" value="">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>First Name</mat-label>
+                <input formControlName="firstName" matInput placeholder="Roy" value="">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Last Name</mat-label>
+                <input formControlName="lastName" matInput placeholder="Meliaz" value="">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input formControlName="email" matInput placeholder="mail@mail.com" value="">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Role</mat-label>
+                <input formControlName="role" type="string" matInput placeholder="0 or 1" value="">
+            </mat-form-field>
+            <mat-form-field *ngIf="inputMode==1" class="example-full-width" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input formControlName="password" type="password" matInput placeholder="" value="">
+            </mat-form-field>
+            <mat-form-field *ngIf="inputMode==1" class="example-full-width" appearance="fill">
+                <mat-label>Confirm Password</mat-label>
+                <input formControlName="confirmPassword" type="password" matInput placeholder="" value="">
+            </mat-form-field>
+            <button type="submit" mat-raised-button color="primary">{{inputMode==1 ? "Add" : "Edit"}}</button>
+            <button (click)="cancelButton()" mat-raised-button color="warn">Cancel</button>
+        </form>
+    </ng-container>
+    <ng-container *ngIf="inputMode==0">
+        <button (click)="addButton()" mat-raised-button color="primary">Add new users</button>
+    </ng-container>
+</div>
+
+
+<!-- <div class="container">
+    <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
+    </form>
+</div> -->
+
+
+<!-- <div class="container">
+    <input type="text" name="" id="">
+    <button mat-raised-button color="primary">Add new employee</button>
+</div> -->
+
+<div class="container">
+    <!-- <h1>Users list:</h1> -->
+    <table mat-table [dataSource]="usersList" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> id </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Title </th>
+        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef> firstName </th>
+        <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef> lastName </th>
+        <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="role">
+        <th mat-header-cell *matHeaderCellDef> role </th>
+        <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> actions </th>
+        <td mat-cell *matCellDef="let element">
+            <button (click)="editButton(element.id)" mat-stroked-button color="primary">Edit</button>
+            <button (click)="deleteButton(element.id)" mat-stroked-button color="primary">Delete</button>
+        </td>
+      </ng-container>
+      
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+  
+
+<br>
+<br>
+<br>
