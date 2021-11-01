@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <nav>
+    <!--  -->
+    <ul class="flex gap-4">
+      <li *ngFor="let route of routes.reverse()">
+        <a class="btn btn-primary" [routerLink]="[ route ]">{{ route }}</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
