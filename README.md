@@ -44,3 +44,13 @@ Employees database and API setup in .NET C#
 Best Practice : RESTFUL API  
 .NET CRUD API / Swagger  
 JWT Authentication
+
+*Day ?*
+- **Session 26**  
+Angular Auth and HTTP Client  
+Using TailwindCSS and daisyUI  
+Accessing premade .NET backend API -> Auth and Movies  
+Assignment 6  
+  
+- **Session 27**  
+Angular Unit Test
