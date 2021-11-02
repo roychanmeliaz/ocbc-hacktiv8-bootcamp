@@ -1,0 +1,33 @@
+<app-add-todo-form [data]="msg_val" (newTodoEvent)="addTodo($event)">
+</app-add-todo-form>
+
+<ol *ngFor="let todo of todos let i=index;" class="list-group">
+    <li *ngIf="todo.editing!=true" class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms=3 me-auto">
+            <div class="content {{(todo.completed? 'done' : '')}}">
+                {{i+1}}. {{todo.content}}
+            </div>
+        </div>
+        <button (click)="editTodo(i)" class="btn btn-light btn-sm">
+            <!-- <i class="bi bi-pencil"></i> -->
+            <mat-icon inline="true">edit</mat-icon>
+        </button>
+        <button (click)="toggleDone(i)" class="btn btn-warning btn-sm completed">
+            <!-- <i class="bi bi-check-circle"></i> -->
+            <mat-icon inline="true">done</mat-icon>
+        </button>
+        <button (click)="deleteTodo(i)" class="btn btn-danger btn-sm">
+            <!-- <i class="bi bi-trash-fill"></i> -->
+            <mat-icon inline="true">restore_from_trash</mat-icon>
+        </button>
+    </li>
+    <li *ngIf="todo.editing==true" class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms=3 me-auto">
+            <input [(ngModel)]="todo.content"/>
+        </div>
+        <button (click)="doneEditTodo(i)" class="btn btn-primary btn-sm">
+            <!-- <i class="bi bi-check-circle"></i> -->
+            <mat-icon inline="true">done</mat-icon>
+        </button>
+    </li>
+</ol>
