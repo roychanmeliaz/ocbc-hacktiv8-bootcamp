@@ -7,6 +7,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressSpinnerModule, MatSpinner} from '@angular/material/progress-spinner';
 
 // custom modules
 import { HttpClientModule } from '@angular/common/http';
@@ -35,6 +38,9 @@ import { PaymentDetailComponent } from './components/payment-detail/payment-deta
     MatTableModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatDialogModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

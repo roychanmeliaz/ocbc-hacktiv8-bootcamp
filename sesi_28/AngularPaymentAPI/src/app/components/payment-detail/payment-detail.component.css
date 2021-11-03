@@ -22,6 +22,10 @@ mat-grid-tile {
     margin-bottom: 10px;
     height: 64px;
 }
+.cancel-button {
+    width: 100%;
+    margin-bottom: 10px;
+}
 
 
 .mat-stroked-button {

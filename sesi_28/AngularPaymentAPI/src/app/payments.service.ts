@@ -14,7 +14,8 @@ import { Payment } from './models/payment';
 export class PaymentsService {
 
   // endpoint:string = "https://payment-api-roy.herokuapp.com/api/PaymentDetail"
-  endpoint:string = "http://localhost:5000/api/PaymentDetail"
+  // endpoint:string = "http://localhost:5000/api/PaymentDetail"
+  endpoint:string = "https://fp-payment-roy.herokuapp.com/api/PaymentDetail"
 
   constructor(private http:HttpClient) { }
 
@@ -36,7 +37,14 @@ export class PaymentsService {
       .pipe( catchError(this.handleError) )
   }
 
-  deleteUser(id:string): Observable<any> {
+  editPayment(payment: Payment, id:string): Observable<any> {
+    const api = `${this.endpoint}/${id}`;
+    return this.http
+      .put(api, payment)
+      .pipe( catchError(this.handleError) )
+  }
+
+  deletePayment(id:string): Observable<any> {
     const api = `${this.endpoint}/${id}`;
     return this.http
       .delete(api)

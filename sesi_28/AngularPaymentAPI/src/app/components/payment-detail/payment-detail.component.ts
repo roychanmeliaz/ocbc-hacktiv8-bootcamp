@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef,ViewChild } from '@angular/core';
 import { Payment } from 'src/app/models/payment';
 import { PaymentsService } from 'src/app/payments.service';
 import { FormGroup, Validators, FormControl, FormGroupDirective, NgForm } from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -20,12 +21,14 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 
 export class PaymentDetailComponent implements OnInit {
 
+
   // mat table
   displayedColumns: string[] = ['paymentDetailId', 'cardOwnerName', 'cardNumber', 'expirationDate', 'actions'];
   // displayedColumns: string[] = ['paymentDetailId', 'cardOwnerName', 'cardNumber', 'expirationDate', 'securityCode', 'actions'];
 
   inputMode:number=1;
-  currentlyEditedId:string=""
+  currentlyEditedId:string="";
+  securityFormDisabled:boolean = false;
 
   // form validator
   form = {
@@ -35,12 +38,15 @@ export class PaymentDetailComponent implements OnInit {
       ]),
       cardNumber: new FormControl('',[
         Validators.required,
+        Validators.pattern(/^\d{4}[-]\d{4}[-]\d{4}[-]\d{4}$/),
       ]),
       expirationDate: new FormControl('',[
         Validators.required,
+        Validators.pattern(/^\d{2}[/]\d{2}$/),
       ]),
-      securityCode: new FormControl('',[
+      securityCode: new FormControl({ value: '', disabled: this.securityFormDisabled },[
         Validators.required,
+        Validators.pattern(/^\d{3}$/),
       ]),
     })
   }
@@ -74,7 +80,12 @@ export class PaymentDetailComponent implements OnInit {
 
   constructor(
     private paymentsService: PaymentsService,
+    private dialog: MatDialog
   ) { }
+  @ViewChild('reqsuccess', { static: true }) reqsuccess!:  TemplateRef<any>;
+  @ViewChild('reqerror', { static: true }) reqerror!:  TemplateRef<any>;
+  @ViewChild('loadDialog', { static: true }) loadDialog!:  TemplateRef<any>;
+  @ViewChild('confirmDialog', { static: true }) confirmDialog!:  TemplateRef<any>;
 
   ngOnInit(): void {
     this.getPayments();
@@ -82,9 +93,38 @@ export class PaymentDetailComponent implements OnInit {
     this.form.inputData.reset()
   }
 
+  openDialog(templateRef:any) {
+    let dialogRef = this.dialog.open(templateRef, {
+    //  width: '300px'
+    });
+  }
+
+  openSuccessDialog() {
+    this.openDialog(this.reqsuccess);
+  }
+
+  openErrorDialog() {
+    this.openDialog(this.reqerror);
+  }
+
+  openLoadDialog() {
+    return this.dialog.open(this.loadDialog, {
+      disableClose: true,
+    });
+  }
+
+  openConfirmDialog() {
+    return this.dialog.open(this.confirmDialog, {
+      //  width: '300px'
+    });
+  }
+  
   getPayments() {
+    // open dialog
+    let loadDialogRef = this.openLoadDialog();
     this.paymentsService.getPayments()
       .subscribe((response)=>{
+        loadDialogRef.close();
         console.log('response diterima');
         this.paymentsList = response;
         console.log(this.paymentsList)
@@ -93,21 +133,31 @@ export class PaymentDetailComponent implements OnInit {
 
   onSubmit(formDirective:FormGroupDirective) {
     if (this.inputMode==1) {
-      this.addUser(formDirective)
+      this.addPayment(formDirective)
     }
     else {
-      this.editUser(formDirective)
+      this.editPayment(formDirective)
     }
   }
+  cancelButton(formDirective:FormGroupDirective) {
+    this.inputMode=1;
+    formDirective.resetForm();
+    this.form.inputData.reset();
+    this.form.inputData.controls['securityCode'].enable()
+}
 
-  addUser(formDirective:FormGroupDirective) {
+  addPayment(formDirective:FormGroupDirective) {
     console.log("now adding")
     // check if validation is clear
     if (this.form.inputData.valid) { 
+      // open dialog
+      let loadDialogRef = this.openLoadDialog();
       // start sending data
       this.paymentsService.addPayment(this.form.inputData.value)
       .subscribe(
         (res) => {
+          loadDialogRef.close();
+          this.openSuccessDialog()
           console.log("add success response:")
           console.log(res)
           if (res) {
@@ -119,10 +169,12 @@ export class PaymentDetailComponent implements OnInit {
           }
         },
         (err) => {
+          loadDialogRef.close();
           console.log("start err")
           console.log(err)
           console.log(err.error.message)
           console.log("end err")  
+          this.openErrorDialog()
           // this.openSnackBar("Error! " + err.error.message, "OK");
         }
       );
@@ -130,41 +182,99 @@ export class PaymentDetailComponent implements OnInit {
     console.log(this.form.inputData.value);
   }
   
-  editUser(formDirective:FormGroupDirective) {
-    console.log("editing")
+  editPayment(formDirective:FormGroupDirective) {
+    console.log("now editing")
+    // check if validation is clear
+    if (this.form.inputData.valid) { 
+      // open dialog
+      let loadDialogRef = this.openLoadDialog();
+      // start sending data
+      // this.form.inputData.controls['securityCode'].enable()
+      let editDataObject:Payment = Object.assign({}, this.form.inputData.value)
+      editDataObject.paymentDetailId = this.currentlyEditedId;
+      console.log(typeof(editDataObject))
+      console.log(editDataObject)
+      this.paymentsService.editPayment(editDataObject,this.currentlyEditedId)
+      .subscribe((res) => {
+        loadDialogRef.close();
+        console.log(res)
+        if (res==null) {
+          this.inputMode=1;
+          formDirective.resetForm();
+          this.form.inputData.reset();
+          this.form.inputData.controls['securityCode'].enable()
+          this.openSuccessDialog()
+          // this.openSnackBar("Edit success!", "OK");
+          this.getPayments();
+        }
+      },
+      (err) => {
+        loadDialogRef.close();
+        console.log(err)
+        // this.openSnackBar("Error! " + err.error.message, "OK");
+        this.openErrorDialog()
+      });
+    }
+    console.log(this.form.inputData.value);
   }
 
   editButton(id:string) {
-    // this.form.inputData.reset();
-
-    // this.form.inputData.markAsPristine();
-    // this.form.inputData.markAsUntouched();
-    // this.form.inputData.updateValueAndValidity();
-
-    this.form.inputData.reset('')
-    console.log("reset")
+    // this.cancelButton();
+    console.log(id)
+    console.log(this.paymentsList)
+    this.inputMode=2;
+    // this.form.inputData.controls['securityCode'].disable()
+    // setTimeout(() => 
+    // {
+    //   this.password?.updateValueAndValidity();
+    //   this.confirmPassword?.updateValueAndValidity();
+    //   console.log("wait over")
+    // },
+    // 1000);
+    this.currentlyEditedId=id;
+    let payment = this.paymentsList.find(i => i.paymentDetailId == id);
+    this.form.inputData.setValue({
+      cardOwnerName: payment?.cardOwnerName,
+      cardNumber: payment?.cardNumber,
+      expirationDate: payment?.expirationDate,
+      securityCode: payment?.securityCode,
+    })
   }
 
   deleteButton(id:string) {
-    this.paymentsService.deleteUser(id)
+    let confirmDialogRef = this.openConfirmDialog();
+    confirmDialogRef.afterClosed().subscribe(res => {
+      if (res==true) {
+        this.deletePayment(id);
+      }
+    })
+  }
+
+  deletePayment(id:string) {
+    let loadDialogRef = this.openLoadDialog();
+    this.paymentsService.deletePayment(id)
     .subscribe(
       (res) => {
+        loadDialogRef.close();
         console.log("start res")
         console.log(res)
         console.log("end res")
         if (res) {
           this.form.inputData.reset();
+          this.openSuccessDialog()
           // this.openSnackBar("Delete success!", "OK");
-          // this.inputMode=0;
+          this.inputMode=1;
           this.getPayments();
         }
       },
       (err) => {
+        loadDialogRef.close();
         console.log("start err")
         console.log(err)
         console.log(err.error.message)
         console.log("end err")
         // this.openSnackBar(err.error.message, "OK");
+        this.openErrorDialog()
       }
     );
   }
