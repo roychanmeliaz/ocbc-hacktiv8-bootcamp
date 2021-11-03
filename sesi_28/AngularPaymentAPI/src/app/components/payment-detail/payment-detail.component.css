@@ -1,0 +1,63 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+}
+
+.container {
+    margin : 32px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+/* 
+mat-grid-tile {
+    background: lightblue;
+} */
+
+.submit-button {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 64px;
+}
+
+
+.mat-stroked-button {
+    margin: 8px;
+}
+
+.example-form {
+    min-width: 150px;
+    width: 100%;
+    margin-top: 32px;
+    margin-left: 64px;
+    margin-bottom: 5%;
+    margin-right: 16px;
+}
+  
+.example-full-width {
+    width: 100%;
+}
+  
+.example-half-width {
+    width: 48%;
+    margin-right: 2%;
+}
+.example-half-width-sec {
+    width: 50%;
+}
+
+.inside-grid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.mat-table {
+    margin-top: 32px;
+    margin-left: 16px;
+    margin-right: 64px;
+}

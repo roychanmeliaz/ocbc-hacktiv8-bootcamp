@@ -1,0 +1,1 @@
+https://payment-api-roy.herokuapp.com/api/PaymentDetail
