@@ -1,5 +1,5 @@
-# OCBC Hacktiv8 Bootcamp Repository
-30 sessions of C#, Angular, and React development bootcamp held by OCBC collaborating with Hacktiv8
+# OCBC Hacktiv8 Bootcamp Full Stack Development 1 Repository
+30 sessions of C# .NET and Angular development bootcamp held by OCBC collaborating with Hacktiv8
 
 *Day 1*
 - **Session 1**  
